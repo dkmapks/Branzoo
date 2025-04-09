@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Casino Game</h1>
+        <div id="balance">Balance: $1000</div>
+        <div id="debt">Debt: $0</div>
+        <div id="luck-cost">Luck Cost: $1000</div>
+        <div id="range">Range: None</div>
+        <button onclick="spin()">Spin ($100)</button>
+        <button onclick="buyLuck()">Buy Luck (<span id="luck-cost-display">$1000</span>)</button>
+        <button onclick="takeCredit()">Take Credit</button>
+        <button onclick="repayCredit()">Repay Credit</button>
+        <button onclick="buyItem('car')">Buy Car ($5000)</button>
+        <button onclick="buyItem('jewelry')">Buy Jewelry ($50000)</button>
+        <button onclick="buyItem('house')">Buy House ($1000000)</button>
+        <button onclick="playRoulette()">Play Roulette ($1000 per chip)</button>
+        <button onclick="openBank()">Bank</button>
+        <button onclick="saveGame()">Save Game</button>
+        <button onclick="loadGame()">Load Game</button>
+        <button onclick="showModMenuPrompt()">Unlock Mod Menu</button>
+        <div id="mod-menu" style="display:none;">
+            <h2>Mod Menu</h2>
+            <button onclick="addBalancePrompt()">Add Money</button>
+            <button onclick="addLuck(5)">Add 5% Luck</button>
+            <button onclick="setGuaranteedWin()">Set Guaranteed Win</button>
+        </div>
+        <div id="bank-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeBank()">&times;</span>
+                <h2>Bank</h2>
+                <button onclick="deposit()">Deposit Money</button>
+                <button onclick="withdraw()">Withdraw Money</button>
+                <div id="bank-balance">Bank Balance: $0</div>
+            </div>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
